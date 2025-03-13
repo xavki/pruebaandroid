@@ -36,15 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun assignRandomImages() {
-        val images = getAllResources("drawable")
-        val shuffledEntries = images.entries.shuffled().take(3)
 
-        shuffledEntries.forEachIndexed { index, entry ->
-            imageViews[index].tag = entry.key
-            imageViews[index].setImageResource(entry.value)
-        }
-    }
 
     private fun playRandomSound() {
         val sounds = getAllResources("raw")
